@@ -4,3 +4,7 @@ export const getContacts = store =>
   );
 
 export const getFilter = store => store.filter;
+
+// export const getContacts = state => state.data.contacts;
+
+// export const getFilter = state => state.filter;

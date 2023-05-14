@@ -18,6 +18,7 @@ export default function ContactForm({ onSubmit }) {
   };
 
   const handleSubmit = evt => {
+    evt.preventDefault();
     const contact = { name, number, id: nanoid() };
 
     if (
@@ -29,7 +30,6 @@ export default function ContactForm({ onSubmit }) {
     } else if (contacts.find(contact => contact.number === number)) {
       alert(`${number} is already in contacts.`);
     } else {
-      evt.preventDefault();
       dispatch(addcontacts(contact));
       reset();
     }
