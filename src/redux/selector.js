@@ -1,10 +1,3 @@
-export const getContacts = store =>
-  store.data.filter(contact =>
-    contact.name.toLowerCase().includes(store.filter.toLowerCase())
-  );
+export const getContacts = state => state.data;
 
-export const getFilter = store => store.filter;
-
-// export const getContacts = state => state.data.contacts;
-
-// export const getFilter = state => state.filter;
+export const getFilter = state => state.filter;
